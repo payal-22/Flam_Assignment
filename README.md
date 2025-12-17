@@ -6,7 +6,7 @@ Hi!
 In this assignment, I built an **interactive cubic Bézier curve** that behaves like a **soft, springy rope**.  
 The curve reacts in real time to user input (mouse movement on the web) and visually explains how **Bézier curves, tangents, and basic physics** work together.
 
-I intentionally implemented everything **from scratch**, without using any built-in Bézier, animation, or physics libraries, so that I could truly understand the underlying math and motion.
+I intentionally implemented everything **from scratch**, without using any built-in Bézier, animation, or physics libraries, so that I could truly understand the underlying math and motion instead of relying on abstractions.
 
 ---
 
@@ -36,8 +36,6 @@ The visualization includes:
 
 ---
 
-
-
 ## 📐 Understanding the Bézier Curve (Simple Explanation)
 
 A **cubic Bézier curve** is defined using **four control points**:
@@ -50,13 +48,3 @@ P0 ●--------------------● P3
       \              /
        ●------------●
        P1            P2
-
-
-
-
-
-
-
-<img width="449" height="368" alt="image" src="https://github.com/user-attachments/assets/37c9c272-aab9-4c47-955b-3eaa1c225013" />
-
-
