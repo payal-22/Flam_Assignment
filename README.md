@@ -48,3 +48,21 @@ P0 ●--------------------● P3
       \              /
        ●------------●
        P1            P2
+
+
+
+##🖱️INTERACTION FLOW
+Interaction Pipeline
+
+Mouse Movement
+      ↓
+Target Position
+      ↓
+Spring Physics
+      ↓
+Control Points (P1, P2)
+      ↓
+Bézier Curve Update
+      ↓
+Rendered on Canvas
+
