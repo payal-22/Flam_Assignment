@@ -35,20 +35,7 @@ The visualization includes:
 - 🌱 Smooth, spring-like motion
 
 ---
-##🖱️INTERACTION FLOW
-Interaction Pipeline
 
-Mouse Movement
-      ↓
-Target Position
-      ↓
-Spring Physics
-      ↓
-Control Points (P1, P2)
-      ↓
-Bézier Curve Update
-      ↓
-Rendered on Canvas
 
 
 ## 📐 Understanding the Bézier Curve (Simple Explanation)
@@ -70,5 +57,6 @@ P0 ●--------------------● P3
 
 
 
+<img width="449" height="368" alt="image" src="https://github.com/user-attachments/assets/37c9c272-aab9-4c47-955b-3eaa1c225013" />
 
 
