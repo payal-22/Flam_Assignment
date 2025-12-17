@@ -10,7 +10,7 @@ export function drawCurve(ctx, P0, P1, P2, P3) {
   ctx.lineWidth = 2
   ctx.stroke()
 }
-
+// Draws tangent vectors at regular intervals along the curve
 export function drawTangents(ctx, P0, P1, P2, P3) {
   for (let t = 0; t <= 1; t += 0.1) {
     const p = bezierPoint(t, P0, P1, P2, P3)
@@ -29,6 +29,7 @@ export function drawTangents(ctx, P0, P1, P2, P3) {
   }
 }
 
+// Draws visible control points as small circles
 export function drawControlPoints(ctx, points) {
   ctx.fillStyle = "#00ffcc"
   for (const p of points) {
