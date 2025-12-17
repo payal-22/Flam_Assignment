@@ -1,3 +1,5 @@
+ //Equation used:acceleration = -k * (position - target) - damping * velocity
+
 export function updateSpring(point, target, dt) {
   const k = 25
   const damping = 6
