@@ -1,43 +1,27 @@
-import { normalize } from "./vector.js"
+import{ normalize } from "./vector.js"
 
 
-// For Computing a point on a cubic Bézier curve for parameter t
-// Formula:- B(t) = (1−t)³P₀ + 3(1−t)²tP₁ + 3(1−t)t²P₂ + t³P₃
-export function bezierPoint(t, P0, P1, P2, P3) {
-  const u = 1 - t
-  const tt = t * t
-  const uu = u * u
+//Formula:-B(t)=((1−t)^3)p0+3((1−t)^2)tp1+3(1−t)(t^2)p2+(t^3)p3
+export function bezierPoint(t,p0,p1,p2,p3){
+  const u=1-t
+  const tt=t*t
+  const uu=u*u
 
-  return {
-    x:
-      uu * u * P0.x +
-      3 * uu * t * P1.x +
-      3 * u * tt * P2.x +
-      tt * t * P3.x,
-    y:
-      uu * u * P0.y +
-      3 * uu * t * P1.y +
-      3 * u * tt * P2.y +
-      tt * t * P3.y
+  return{
+    x: uu*u*p0.x+3*uu*t*p1.x+3*u*tt*p2.x+tt*t*p3.x,
+    y:uu*u*p0.y+3*uu*t*p1.y+3*u*tt*p2.y+tt*t*p3.y
   }
 }
 
-// We have to compute the tangent vector using the derivative of the Bézier curve
-// B'(t) = 3(1−t)²(P₁−P₀) + 6(1−t)t(P₂−P₁) + 3t²(P₃−P₂)
+// Calcuated tangent equation by doing 1st derivative
+// B'(t)=3((1−t)^2)(p₁−p₀)+6(1−t)t(p₂−p₁)+3(t^2)(p₃−p₂)
 
 
-export function bezierTangent(t, P0, P1, P2, P3) {
-  const u = 1 - t
-
-  const v = {
-    x:
-      3 * u * u * (P1.x - P0.x) +
-      6 * u * t * (P2.x - P1.x) +
-      3 * t * t * (P3.x - P2.x),
-    y:
-      3 * u * u * (P1.y - P0.y) +
-      6 * u * t * (P2.y - P1.y) +
-      3 * t * t * (P3.y - P2.y)
+export function bezierTangent(t,p0,p1,p2,p3) {
+  const u=1-t
+  const v={
+    x:3*u*u*(p1.x-p0.x)+6*u*t*(p2.x-p1.x)+3*t*t*(p3.x-p2.x),
+    y:3*u*u*(p1.y-p0.y)+6*u*t*(p2.y-p1.y)+3*t*t*(p3.y-p2.y)
   }
 
   return normalize(v)
